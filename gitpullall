@@ -3,6 +3,8 @@ BCPATH=/home/$USER/BraineCode
 START=$(pwd)
 touch $BCPATH/gits.list
 
+python3 /home/$USER/.bin/binhelpers/subdirfind.py $BCPATH .git
+
 while read line; do
   # echo $line
   cd $line

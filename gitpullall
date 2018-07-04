@@ -6,9 +6,10 @@ touch $BCPATH/gits.list
 python3 /home/$USER/.bin/binhelpers/subdirfind.py $BCPATH .git
 
 while read line; do
-  # echo $line
   cd $line
+  echo $line
   git pull
+  echo ' '
 done < $BCPATH/gits.list
 
 cd $START
